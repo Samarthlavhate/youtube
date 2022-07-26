@@ -1,0 +1,103 @@
+<div style="background-color:white ; position: absolute;
+z-index: 100;  width: 100%; height:22cm;" >
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches" >
+    <mat-toolbar color="primary" class="example-toolbar">
+      <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+     <a routerLink="/" style="color:white; text-decoration: none;"><h1 class="example-app-name">Form</h1></a> 
+
+      
+
+    </mat-toolbar>
+  
+    <mat-sidenav-container class="example-sidenav-container"
+                           [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+      <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
+                   [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+       <mat-nav-list>
+        <hr>
+        <a routerLink="/form1" style="color: black; text-decoration: none;"> <p style="padding-right: 40px; padding-left: 30px; ">=<mat-icon>reorder</mat-icon>&nbsp; liveForm </p></a>
+        <a routerLink="/form2" style="color: black; text-decoration: none;">  <p style="padding-right: 40px; padding-left: 30px; "><mat-icon>add_to_queue</mat-icon>&nbsp; UploadForm </p></a>
+   
+
+
+       
+        
+        </mat-nav-list> 
+        
+      </mat-sidenav>
+    
+  
+
+
+
+
+
+  <div style="text-align: center; margin-top: 3cm;">
+    <h1><b>Upload Form</b></h1>
+
+
+<form #myform="ngForm" ngvalidation (ngSubmit)="onsubmit()"> <br>
+    <!-- ----------- -->
+    <input type="text" name="Url" placeholder="enter url" [(ngModel)]="myuser.Url" #Url="ngModel" required
+        appValidation> <br>
+    <div *ngIf="Url.invalid &&(Url.touched ||Url.dirty )" style=" color:red">
+        <div *ngIf="Url.errors?.['required']">*enter a valid input</div>
+
+        <div *ngIf="Url.invalid &&(Url.dirty )">
+        <div *ngIf="Url.errors?.['appValidation']">*url should end with .com</div>
+    
+            
+        </div>
+    </div>
+    
+    <!-- ----------- -->
+    <input type="text" name="title" placeholder="enter title" [(ngModel)]="myuser.title" #title="ngModel" required> <br>
+    <div *ngIf="title.invalid &&(title.touched ||title.dirty )" style=" color:red">
+        *please enter title
+    </div>
+    <!-- ------------ -->
+    <input type="text" name="channeltitle" placeholder="channel title" [(ngModel)]="myuser.channeltitle"
+        #channeltitle="ngModel" required> <br>
+    <div *ngIf="channeltitle.invalid &&(channeltitle.touched ||channeltitle.dirty )" style=" color:red">
+        *please enter channel title
+    </div>
+    <!-- --------------- -->
+   <label for=""><b>selection 1</b><select name="" id="">
+       <option hidden value="select option" > select option</option>
+        <option value="youtubes">youtubes</option>
+        <option value="youtube">option2</option>
+    </select> </label> <br>
+   
+    <label for=""><b>selection 2</b><select name="" id="">
+        <option hidden value="select option"> select option</option>
+        <option value="youtubes">youtubes</option>
+        <option value="youtube">option2</option>
+    </select> </label>  <br>
+   
+   
+    <label for=""><b>selection 3</b> <select name="" id="">
+        <option hidden value="select option"> select option</option>
+        <option value="youtubes">youtubes</option>
+        <option value="youtube">option2</option>
+    </select> </label>  <br>
+   
+   
+    <label for=""><b>selection 4</b> <select name="" id="">
+        <option hidden value="select option"> select option</option>
+        <option value="youtubes" *ngFor="let i of newarry ">{{i}}</option>
+
+    </select> </label> <br>
+    <input type="submit" [disabled]="myform.invalid">
+</form>
+
+</div>
+</mat-sidenav-container>
+
+
+
+
+
+<!-- <body style="background-color:white ; position: absolute;
+z-index: 100;  width: 100%; height:22cm;" > -->
+  
+</div>

@@ -1,0 +1,264 @@
+
+
+<router-outlet></router-outlet>
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches" >
+    <mat-toolbar color="primary" class="example-toolbar">
+      <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+     <a routerLink="/" style="color:white; text-decoration: none;"><h1 class="example-app-name">YOuthube</h1></a> 
+
+      <form class="example-form">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <input matInput placeholder="search kar lo" class="search" >
+          
+        </mat-form-field>
+        
+      </form>
+    
+      <span class="material-icons , m1">
+        search
+        </span>
+     
+           <a routerLink="/form2" style="color: white;" class="mt2"><span class="material-icons , mt2" matBadge="8" matBadgePosition="before" matBadgeColor="accent">
+            videocam
+            </span></a> 
+            
+            
+           <mat-icon class="mt3">mic</mat-icon> 
+           <mat-icon class="mt3"> view_comfy </mat-icon>
+            <mat-icon class="mt3">person</mat-icon>
+        
+
+
+    </mat-toolbar>
+  
+    <mat-sidenav-container class="example-sidenav-container"
+                           [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+      <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
+                   [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+       <mat-nav-list>
+        <hr>
+    <p style="padding-right: 40px; padding-left: 30px; "><mat-icon class="sidenavicon">home</mat-icon>&nbsp; Home </p>
+    <p style="padding-right: 40px; padding-left: 30px; "><mat-icon>explore</mat-icon> &nbsp; Explore </p>
+    <p style="padding-right: 40px; padding-left: 30px; "><mat-icon>whatshot</mat-icon>&nbsp; Shorts </p>
+    <p style="padding-right: 40px; padding-left: 30px; "><mat-icon>subscriptions</mat-icon>&nbsp; Sabascribe </p>
+    <hr>
+        <p style="padding-right: 40px; padding-left: 30px; "><mat-icon>library_books</mat-icon>&nbsp; Library</p>
+        <p style="padding-right: 40px; padding-left: 30px; "><mat-icon>repeat_one</mat-icon>&nbsp; History</p>
+        <p style="padding-right: 40px; padding-left: 30px; "><mat-icon>add_to_queue</mat-icon>&nbsp; Your video</p>
+        <p style="padding-right: 40px; padding-left: 30px; "><mat-icon>access_time</mat-icon>&nbsp; Watch Later</p>
+        <p style="padding-right: 40px; padding-left: 30px; "><mat-icon>thumb_up_alt</mat-icon>&nbsp; Liked</p>
+
+
+
+
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            show more
+          </mat-expansion-panel-header>
+        
+          <ng-template matExpansionPanelContent>
+            <p> <mat-icon>playlist_play</mat-icon>&nbsp;rock song</p>
+            <p><mat-icon>playlist_play</mat-icon>&nbsp;stand ups </p>
+            <p><mat-icon>playlist_play</mat-icon>&nbsp;coding </p>
+          </ng-template>
+        </mat-expansion-panel>
+
+
+       
+        
+        </mat-nav-list> 
+        
+      </mat-sidenav>
+    
+  
+  <hr>
+  <mat-chip-list aria-label="Dog selection">
+    <mat-chip  style="margin-left: 30px;">
+    
+      All
+    </mat-chip>
+    <mat-chip color="primary" style="margin-left: 20px;">
+     
+      Live
+    </mat-chip>
+    <mat-chip color="accent"  style="margin-left: 20px;">
+   
+      Gaming
+    </mat-chip>
+    <mat-chip  style="margin-left: 20px;">
+    
+      Debates
+    </mat-chip>
+    <mat-chip color="primary" style="margin-left: 20px;">
+     
+      Music
+    </mat-chip>
+    <mat-chip color="accent" style="margin-left: 20px;">
+   
+      Mixes
+    </mat-chip>
+
+    <mat-chip  style="margin-left: 20px;">
+    
+      JAVA
+    </mat-chip>
+    <mat-chip color="primary"  style="margin-left: 20px;">
+     
+      javascript
+    </mat-chip>
+    <mat-chip color="accent"  style="margin-left: 20px;">
+   
+      Angular
+    </mat-chip>
+    <mat-chip  style="margin-left: 20px;">
+    
+      Coding
+    </mat-chip>
+    <mat-chip color="primary"  style="margin-left: 20px;">
+     
+      Peace
+    </mat-chip>
+    <mat-chip color="accent"  style="margin-left: 20px;">
+   
+      Rock
+    </mat-chip>
+    
+  </mat-chip-list>
+  <hr>
+  
+  
+  <div style="margin-left:.7cm ;">
+  <mat-grid-list cols="4" rowHeight=".8:1">
+    
+    <mat-grid-tile>
+      <mat-card class="example-card">
+     
+        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu" style="width:250px; height:250px">
+        <mat-card-content>
+          <div style="width:80% ;">
+          <p>
+            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+      bred for hunting.
+          </p>
+        </div>
+        </mat-card-content>
+     
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile> <mat-card class="example-card">
+     
+      <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu" style="width:250px; height:250px">
+      <mat-card-content>
+        <div style="width:80% ;">
+          <p>
+            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+      bred for hunting.
+          </p>
+        </div>
+      </mat-card-content>
+   
+    </mat-card></mat-grid-tile>
+    <mat-grid-tile> <mat-card class="example-card">
+     
+      <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu" style="width:250px; height:250px">
+      <mat-card-content>
+        <div style="width:80% ;">
+          <p>
+            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+      bred for hunting.
+          </p>
+        </div>
+      </mat-card-content>
+   
+    </mat-card></mat-grid-tile>
+    <mat-grid-tile> <mat-card class="example-card">
+     
+      <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu" style="width:250px; height:250px">
+      <mat-card-content>
+        <div style="width:80% ;">
+          <p>
+            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+      bred for hunting.
+          </p>
+        </div>
+      </mat-card-content>
+   
+    </mat-card></mat-grid-tile>
+  
+  </mat-grid-list>
+  <mat-grid-list cols="4" rowHeight=".8:1">
+    
+    <mat-grid-tile>
+      <mat-card class="example-card">
+     
+        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu" style="width:250px; height:250px">
+        <mat-card-content>
+          <div style="width:80% ;">
+          <p>
+            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+      bred for hunting.
+          </p>
+        </div>
+        </mat-card-content>
+     
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile> <mat-card class="example-card">
+     
+      <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu" style="width:250px; height:250px">
+      <mat-card-content>
+        <div style="width:80% ;">
+          <p>
+            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+      bred for hunting.
+          </p>
+        </div>
+      </mat-card-content>
+   
+    </mat-card></mat-grid-tile>
+    <mat-grid-tile> <mat-card class="example-card">
+     
+      <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu" style="width:250px; height:250px">
+      <mat-card-content>
+        <div style="width:80% ;">
+          <p>
+            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+      bred for hunting.
+          </p>
+        </div>
+      </mat-card-content>
+   
+    </mat-card></mat-grid-tile>
+    <mat-grid-tile> <mat-card class="example-card">
+     
+      <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu" style="width:250px; height:250px">
+      <mat-card-content>
+        <div style="width:80% ;">
+          <p>
+            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+      bred for hunting.
+          </p>
+        </div>
+      </mat-card-content>
+   
+    </mat-card></mat-grid-tile>
+  
+  </mat-grid-list>
+ 
+</div>
+
+<!-- <app-form></app-form> -->
+    </mat-sidenav-container>
+    
+  
+
+  
+    <a routerLink="/login">login</a>
